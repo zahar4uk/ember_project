@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('contact');
   this.route('reviews');
   this.route('portfolio');
+  this.route('about-us');
 });
 
 export default Router;
