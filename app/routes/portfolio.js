@@ -6,19 +6,19 @@ export default Route.extend({
       type: 'print tamplate',
       image_src: 'Product-image/Example.png'
     },{
-      type: 'print tamplate',
+      type: 'web tamplate',
       image_src: 'Product-image/Example1.png'
     },{
-      type: 'print tamplate',
+      type: 'user interface',
       image_src: 'Product-image/Example2.png'
     },{
-      type: 'print tamplate',
+      type: 'mock up',
       image_src: 'Product-image/Example3.png'
     },{
-      type: 'print tamplate',
+      type: 'user interface',
       image_src: 'Product-image/Example4.png'
     },{
-      type: 'print tamplate',
+      type: 'web tamplate',
       image_src: 'Product-image/Example5.png'
     }];
   }
