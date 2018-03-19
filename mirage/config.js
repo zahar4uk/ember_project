@@ -4,7 +4,8 @@ export default function() {
   this.get('/portfolio', function() {
     return {
       data: [{
-        ge_src: 'Product-image/Example.png'
+        type: 'print tamplate',
+        image_src: 'Product-image/Example.png'
       },{
         type: 'web tamplate',
         image_src: 'Product-image/Example1.png'
