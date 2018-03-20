@@ -1,26 +1,32 @@
 export default function() {
-  this.namespace = '/api';
+  this.namespace = 'api';
 
-  this.get('/portfolio', function() {
+  this.get('/portfolios', function() {
     return {
-      data: [{
+      portfolios: [{
+        id: 1,
         type: 'print tamplate',
-        image_src: 'Product-image/Example.png'
+        imageSrc: 'Product-image/Example.png'
       },{
+        id: 2,
         type: 'web tamplate',
-        image_src: 'Product-image/Example1.png'
+        imageSrc: 'Product-image/Example1.png'
       },{
+        id: 3,
         type: 'user interface',
-        image_src: 'Product-image/Example2.png'
+        imageSrc: 'Product-image/Example2.png'
       },{
+        id: 4,
         type: 'mock up',
-        image_src: 'Product-image/Example3.png'
+        imageSrc: 'Product-image/Example3.png'
       },{
+        id: 5,
         type: 'user interface',
-        image_src: 'Product-image/Example4.png'
+        imageSrc: 'Product-image/Example4.png'
       },{
+        id: 6,
         type: 'web tamplate',
-        image_src: 'Product-image/Example5.png'
+        imageSrc: 'Product-image/Example5.png'
       }]
     };
   });
