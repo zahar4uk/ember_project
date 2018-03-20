@@ -1,0 +1,23 @@
+{
+  "name": "ember-project",
+  "description": "ember project",
+  "main": "index.html",
+  "authors": [
+    "Vladislav Zaharchuk"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ember"
+  ],
+  "homepage": "https://github.com/zahar4uk/ember_project",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0"
+  }
+}

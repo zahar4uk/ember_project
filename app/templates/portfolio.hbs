@@ -6,30 +6,31 @@
     </section>
   </div>
 </div>
+
 <section class="portfolio_nav">
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link" href="#">All</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Print template</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="#">Web template</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">User interface</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Mock up</a>
-        </li>
-      </ul>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" href="#">All</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Print template</a>
+    </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#">Web template</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">User interface</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Mock up</a>
+    </li>
+  </ul>
 </section>
 
 <article class="portfolio_examples">
   <div class="row no-gutters">
-    {{#each model as |imageUnit|}}
-      {{image-listing image=imageUnit}}
+    {{#each model as |portfolio|}}
+      {{image-listing image=portfolio}}
     {{/each}}
   </div>
 </article>
