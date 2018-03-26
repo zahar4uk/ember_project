@@ -10,19 +10,19 @@
 <section class="portfolio_nav">
   <ul class="nav justify-content-center">
     <li class="nav-item">
-      <a class="nav-link" href="#">All</a>
+      {{#link-to "portfolio" (query-params type="null") class="nav-link"}}All{{/link-to}}
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Print template</a>
-    </li>
-      <li class="nav-item">
-      <a class="nav-link" href="#">Web template</a>
+      {{#link-to "portfolio" (query-params type="print tamplate") class="nav-link"}}Print template{{/link-to}}
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">User interface</a>
+      {{#link-to "portfolio" (query-params type="web tamplate") class="nav-link"}}Web template{{/link-to}}
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Mock up</a>
+      {{#link-to "portfolio" (query-params type="user interface") class="nav-link"}}User interface{{/link-to}}
+    </li>
+    <li class="nav-item">
+      {{#link-to "portfolio" (query-params type="mock up") class="nav-link"}}Mock up{{/link-to}}
     </li>
   </ul>
 </section>
