@@ -1,41 +1,33 @@
 export default function() {
   this.namespace = 'api';
-  const portfolios = [{
-    id: 1,
-    type: 'print tamplate',
-    imageSrc: 'Product-image/Example.png'
-  },{
-    id: 2,
-    type: 'web tamplate',
-    imageSrc: 'Product-image/Example1.png'
-  },{
-    id: 3,
-    type: 'user interface',
-    imageSrc: 'Product-image/Example2.png'
-  },{
-    id: 4,
-    type: 'mock up',
-    imageSrc: 'Product-image/Example3.png'
-  },{
-    id: 5,
-    type: 'user interface',
-    imageSrc: 'Product-image/Example4.png'
-  },{
-    id: 6,
-    type: 'web tamplate',
-    imageSrc: 'Product-image/Example5.png'
-  }];
 
-  this.get('/portfolios', function(schema, request) {
-    if (request.queryParams.type) {
-      return {
-        portfolios: portfolios.filter(function(item) {
-          return item.type === request.queryParams.type;
-        })
-      }
-    }
+  this.get('/portfolios', function() {
     return {
-      portfolios: portfolios
+      portfolios: [{
+        id: 1,
+        type: 'print tamplate',
+        imageSrc: 'Product-image/Example.png'
+      },{
+        id: 2,
+        type: 'web tamplate',
+        imageSrc: 'Product-image/Example1.png'
+      },{
+        id: 3,
+        type: 'user interface',
+        imageSrc: 'Product-image/Example2.png'
+      },{
+        id: 4,
+        type: 'mock up',
+        imageSrc: 'Product-image/Example3.png'
+      },{
+        id: 5,
+        type: 'user interface',
+        imageSrc: 'Product-image/Example4.png'
+      },{
+        id: 6,
+        type: 'web tamplate',
+        imageSrc: 'Product-image/Example5.png'
+      }]
     };
   });
   // These comments are here to help you get started. Feel free to delete them.

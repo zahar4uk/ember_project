@@ -6,7 +6,7 @@ export default Route.extend({
       refreshModel: true
     }
   },
-  model (params){
-    return this.get('store').query('portfolio', params);
+  model (){
+    return this.get('store').findAll('portfolio');
   }
 });
