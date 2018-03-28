@@ -9,19 +9,19 @@
 
 <section class="portfolio_nav">
   <ul class="nav justify-content-center">
-    <li class="nav-item">
-      {{#link-to "portfolio" (query-params type="null") class="nav-link"}}All{{/link-to}}
+    <li class="nav-item {{if (is-equal type '') 'active'}}">
+      {{#link-to "portfolio" (query-params type="") class="nav-link"}}All{{/link-to}}
     </li>
-    <li class="nav-item">
+    <li class="nav-item {{if (is-equal type 'print tamplate') 'active'}}">
       {{#link-to "portfolio" (query-params type="print tamplate") class="nav-link"}}Print template{{/link-to}}
     </li>
-    <li class="nav-item">
+    <li class="nav-item {{if (is-equal type 'web tamplate') 'active'}} ">
       {{#link-to "portfolio" (query-params type="web tamplate") class="nav-link"}}Web template{{/link-to}}
     </li>
-    <li class="nav-item">
+    <li class="nav-item {{if (is-equal type 'user interface') 'active'}}">
       {{#link-to "portfolio" (query-params type="user interface") class="nav-link"}}User interface{{/link-to}}
     </li>
-    <li class="nav-item">
+    <li class="nav-item {{if (is-equal type 'mock up') 'active'}}">
       {{#link-to "portfolio" (query-params type="mock up") class="nav-link"}}Mock up{{/link-to}}
     </li>
   </ul>
@@ -29,7 +29,7 @@
 
 <article class="portfolio_examples">
   <div class="row no-gutters">
-    {{#each model as |portfolio|}}
+    {{#each filteredPortfoio as |portfolio|}}
       {{image-listing image=portfolio}}
     {{/each}}
   </div>

@@ -2,14 +2,14 @@ body{
 	background-color: #f6f2f2;
 }
 .page_header h1{
-	
+
 	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 .page_header{
 	margin: auto;
 	margin-top: 20px;
 	padding-bottom: 20px;
-	
+
 }
 .header_border{
 	border-bottom: 2px gray solid;
@@ -53,8 +53,8 @@ body{
 	margin-top: 10px;
 	border:none;
 }
-.material-icons{ 
-	color: #ff3b4a; 
+.material-icons{
+	color: #ff3b4a;
 }
  .page_header_iframe{
 	float: right;
@@ -151,13 +151,14 @@ main{
     color: black;
 }
  .topnav a:active {
-    color: #f00; 
-   } 
+    color: #f00;
+   }
 .btn:hover{
 	background-color: #ff3f40;
 	color: black;
 }
-.portfolio_nav a:hover{
+.portfolio_nav a:hover,
+.portfolio_nav a.active{
 	color: #f00;
 	border-bottom-color:red;
 }
