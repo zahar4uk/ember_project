@@ -1,3 +1,4 @@
+@import "ember-photoswipe";
 body{
 	background-color: #f6f2f2;
 }
@@ -154,7 +155,7 @@ main{
     color: #f00; 
    } 
 .btn:hover{
-	background-color: #ff3f40;
+	background-color:#ff3f40;
 	color: black;
 }
 .portfolio_nav a:hover{
@@ -164,12 +165,10 @@ main{
 .portfolio_nav a:active{
 	color: #fff;
 }
-
-}@media(max-width: 504px){
+@media(max-width: 504px){
  #hide_menu_btn{
  	display: block;
  }
-
 }
 @media(max-width: 992px){
 	.page_header iframe{
