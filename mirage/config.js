@@ -3,27 +3,39 @@ export default function() {
   const portfolios = [{
     id: 1,
     type: 'print tamplate',
-    imageSrc: 'Product-image/Example.png'
+    src: 'Product-image/Example.png',
+    w: 768,
+    h: 1024
   },{
     id: 2,
     type: 'web tamplate',
-    imageSrc: 'Product-image/Example1.png'
+    src: 'Product-image/Example1.png',
+    w: 768,
+    h: 1024
   },{
     id: 3,
     type: 'user interface',
-    imageSrc: 'Product-image/Example2.png'
+    src: 'Product-image/Example2.png',
+    w: 768,
+    h: 1024
   },{
     id: 4,
     type: 'mock up',
-    imageSrc: 'Product-image/Example3.png'
+    src: 'Product-image/Example3.png',
+    w: 768,
+    h: 1024
   },{
     id: 5,
     type: 'user interface',
-    imageSrc: 'Product-image/Example4.png'
+    src: 'Product-image/Example4.png',
+    w: 768,
+    h: 1024
   },{
     id: 6,
     type: 'web tamplate',
-    imageSrc: 'Product-image/Example5.png'
+    src: 'Product-image/Example5.png',
+    w: 768,
+    h: 1024
   }];
 
   this.get('/portfolios', function(schema, request) {
