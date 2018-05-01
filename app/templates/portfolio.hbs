@@ -29,8 +29,15 @@
 
 <article class="portfolio_examples">
   <div class="row no-gutters">
-    {{#each model as |portfolio|}}
-      {{image-listing image=portfolio}}
-    {{/each}}
+    {{#photo-swipe items=model history=false as |photoswipe|}}
+      {{#each model as |portfolio index|}}
+        {{!-- <div class="col-lg-3 col-md-6 col-sm-6"> --}}
+          <section class="exemple">
+            <img src={{portfolio.src}} alt="Example" {{action photoswipe.actions.open (hash index=index)}}/>
+          </section>
+        {{!-- </div> --}}
+      {{/each}}
+    {{/photo-swipe}}
   </div>
 </article>
+
