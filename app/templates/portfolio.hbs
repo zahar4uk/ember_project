@@ -30,10 +30,10 @@
 <article class="portfolio_examples">
   <div class="row no-gutters">
     {{#photo-swipe items=model history=false as |photoswipe|}}
-      {{#each model as |portfolio index|}}
+      {{#each model as |portfolio|}}
         {{!-- <div class="col-lg-3 col-md-6 col-sm-6"> --}}
           <section class="exemple">
-            <img src={{portfolio.src}} alt="Example" {{action photoswipe.actions.open (hash index=index)}}/>
+            <img src={{portfolio.src}} alt="{{portfolio.title}}" {{action photoswipe.actions.open (hash index=index)}}/>
           </section>
         {{!-- </div> --}}
       {{/each}}

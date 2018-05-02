@@ -4,39 +4,88 @@ export default function() {
     id: 0,
     type: 'print tamplate',
     src: 'Product-image/Example.png',
-    w: 768,
-    h: 1024
+    w: 1122,
+    h: 658,
+    title: 'print tamplate',
+    msrc: '(optional) larger image'
   },{
     id: 1,
     type: 'web tamplate',
     src: 'Product-image/Example1.png',
-    w: 768,
-    h: 1024
+    w: 1122,
+    h: 658,
+    title: 'web tamplate',
+    msrc: '(optional) larger image'
   },{
     id: 2,
     type: 'user interface',
     src: 'Product-image/Example2.png',
-    w: 768,
-    h: 1024
+    w: 1122,
+    h: 658,
+    title: 'user interface',
+    msrc: '(optional) larger image'
   },{
     id: 3,
     type: 'mock up',
     src: 'Product-image/Example3.png',
-    w: 768,
-    h: 1024
+    w: 1122,
+    h: 658,
+    title: 'mock up',
+    msrc: '(optional) larger image'
   },{
     id: 4,
     type: 'user interface',
     src: 'Product-image/Example4.png',
-    w: 768,
-    h: 1024
+    w: 1122,
+    h: 658,
+    title: 'user interface',
+    msrc: '(optional) larger image'
   },{
     id: 5,
     type: 'web tamplate',
     src: 'Product-image/Example5.png',
-    w: 768,
-    h: 1024
-  }];
+    w: 1122,
+    h: 658,
+    title: 'web tamplate',
+    msrc: '(optional) larger image'
+  },
+  {
+    id: 5,
+    type: 'user interface',
+    src: 'Product-image/Example5.png',
+    w: 1122,
+    h: 658,
+    title: 'web tamplate',
+    msrc: '(optional) larger image'
+  },
+  {
+    id: 6,
+    type: 'mock up',
+    src: 'Product-image/Example3.png',
+    w: 1122,
+    h: 658,
+    title: 'mock up',
+    msrc: '(optional) larger image'
+  },
+  {
+    id: 7,
+    type: 'mock up',
+    src: 'Product-image/Example3.png',
+    w: 1122,
+    h: 658,
+    title: 'mock up',
+    msrc: '(optional) larger image'
+  },
+  {
+    id: 7,
+    type: 'mock up',
+    src: 'Product-image/Example3.png',
+    w: 1122,
+    h: 658,
+    title: 'mock up',
+    msrc: '(optional) larger image'
+  }
+];
 
   this.get('/portfolios', function(schema, request) {
     if (request.queryParams.type) {
