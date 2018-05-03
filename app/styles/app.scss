@@ -142,7 +142,7 @@ main{
 .employee_info{
 	margin-top: 20px;
 }
-.employee_list_elem img{
+.employee_list_elem{
   width: 150px;
   vertical-align: bottom;
   margin: 5px auto;
@@ -179,7 +179,6 @@ main{
 		.services{
 		margin-top: 25px;
 	}
-
 }
 @media(max-width: 1024px){
 	    .contact_header, .about_header{
