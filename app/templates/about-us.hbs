@@ -9,14 +9,14 @@
   <div class="row employee_info">
                 <div class="col-lg-4 col-md-6">
                   <div class="avatar">
-                    <img src="Employees/mask.jpg">
+                    <img src={{imageSrc}} alt={{workerTitle}} >
                   </div>
                 </div>
                 <div class="col-lg-8 col-md-6">
                   <div class="row">
                     <div class="col">
-                      <h4>ELON MUSK</h4>
-                      <p>.Streamline project, resource, and portfolio management with Microsoft Project and Portfolio Management.Streamline project, resource, and portfolio management with Microsoft Project and Portfolio ManagementStreamline project, resource, and portfolio management with Microsoft Project and Portfolio Management.Streamline project, resource, and portfolio management with Microsoft Project and Portfolio Management</p>
+                      <h4>{{workerName}}</h4>
+                      <p>{{description}}</p>
                       <p><a href="">Twiter</a> <a href="">Facebook</a> <a href="">Dribble</a> <a href="">Odnoklasniki</a> </p>
                     </div>
                   </div>
@@ -24,7 +24,7 @@
                     {{#swiper-container pagination=true  slidesPerView=4}}
                         {{#each model as |employee|}}
                         {{#swiper-slide}}
-                          <img src={{employee.src}} alt={{employee.title}} {{action 'changeWorker' employee.name employee.title employee.description}} class="employee_list_elem"/>
+                          <img src={{employee.src}} alt={{employee.title}} {{action 'changeWorker' employee.name employee.title employee.description employee.src}} class="employee_list_elem"/>
                           {{/swiper-slide}}
                         {{/each}}
                     {{/swiper-container}}
