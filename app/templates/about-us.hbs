@@ -24,7 +24,7 @@
                     {{#swiper-container pagination=true  slidesPerView=4}}
                         {{#each model as |employee|}}
                         {{#swiper-slide}}
-                          <img src={{employee.src}} alt={{employee.title}} class="employee_list_elem"/>
+                          <img src={{employee.src}} alt={{employee.title}} {{action 'changeWorker' employee.name employee.title employee.description}} class="employee_list_elem"/>
                           {{/swiper-slide}}
                         {{/each}}
                     {{/swiper-container}}
