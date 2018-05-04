@@ -84,20 +84,20 @@ export default function() {
   }
 ];
 const employees = [
-  { id: 0, title: 'employee', src: 'Employees/mask.jpg',
-   description: 'Streamline project, resource, and portfolio management with Microsoft Project'},
-  { id: 1, title: 'employee', src: 'Employees/mask.jpg',
+  { id: 0, name:'Elon Mask', title: 'employee', src: 'Employees/mask.jpg',
+   description: 'Streamline project, resource, and portfolio management with Microsoft Project portfolio management with Microsoft'},
+  { id: 1, name: 'Albert Einstein', title: 'employee', src: 'Employees/mask.jpg',
+  description: 'Streamline project, resource, and portfolio Streamline project, resource management with Microsoft Project'},
+  { id: 2, name: 'Steve Jobs',title: 'employee', src: 'Employees/mask.jpg',
   description: 'Streamline project, resource, and portfolio management with Microsoft Project'},
-  { id: 2, title: 'employee', src: 'Employees/mask.jpg',
-  description: 'Streamline project, resource, and portfolio management with Microsoft Project'},
-  { id: 3, title: 'employee', src: 'Employees/mask.jpg',
-  description: 'Streamline project, resource, and portfolio management with Microsoft Project'},
-  { id: 4, title: 'employee', src: 'Employees/mask.jpg',
-  description: 'Streamline project, resource, and portfolio management with Microsoft Project'},
-  { id: 5, title: 'employee', src: 'Employees/mask.jpg',
-  description: 'Streamline project, resource, and portfolio management with Microsoft Project'},
-  { id: 6, title: 'employee', src: 'Employees/mask.jpg',
-  description: 'Streamline project, resource, and portfolio management with Microsoft Project'}
+  { id: 3, name: 'Bla bla bla',title: 'employee', src: 'Employees/mask.jpg',
+  description: 'Streamline project, resource, and portfolio manav  tools help you keep track of projects and stay organized gement with Microsoft Project'},
+  { id: 4, name: 'Lja Kropha',title: 'employee', src: 'Employees/mask.jpg',
+  description: 'Streamline project, resource,  tools help you keep track of projects and stay organized and portfolio management with Microsoft Project'},
+  { id: 5, name: 'Chik chik',title: 'employee', src: 'Employees/mask.jpg',
+  description: 'Streamline project,  tools help you keep track of projects and stay organized resource, and portfolio management with Microsoft Project'},
+  { id: 6, name: 'Deep purple',title: 'employee', src: 'Employees/mask.jpg',
+  description: 'Streamline  tools help you keep track of projects and stay organized project, resource, and portfolio management with Microsoft Project'}
 ];
 this.get('/employees',function(){
   return {
