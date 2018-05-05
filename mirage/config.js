@@ -83,6 +83,19 @@ export default function() {
     msrc: '(optional) larger image'
   }
 ];
+this.get('/portfolios', function(schema, request) {
+  if (request.queryParams.type) {
+    return {
+      portfolios: portfolios.filter(function(item) {
+        return item.type === request.queryParams.type;
+      })
+    }
+  }
+  return {
+    portfolios: portfolios
+  };
+});
+
 const employees = [
   { id: 0, name:'Elon Mask', title: 'employee', src: 'Employees/mask.jpg',
    description: 'Streamline project, resource, and portfolio management with Microsoft Project portfolio management with Microsoft'},
@@ -105,19 +118,21 @@ this.get('/employees',function(){
   } 
 });
 
-  this.get('/portfolios', function(schema, request) {
-    if (request.queryParams.type) {
-      return {
-        portfolios: portfolios.filter(function(item) {
-          return item.type === request.queryParams.type;
-        })
-      }
-    }
-    return {
-      portfolios: portfolios
-    };
-  });
-
+ const reviews = [
+  {id:0, name:'Elon Mask',
+  review:'Streamline project, resource, and portfolio mana Portfolio Management.Streamline project, resource, and portfolio management with Microsoft Project and Portfolio Managemen'},
+  {id:1,name:'Albert Einstein',
+  review:'Streamline project, resource, and portfolio mana Portfolio Management.Streamline project, resource, and portfolio management with Microsoft Project and Portfolio Managemen'},
+  {id:2,name:'Steve Jobs',
+  review:'Streamline project, resource, and portfolio mana Portfolio Management.Streamline project, resource, and portfolio management with Microsoft Project and Portfolio Managemen'},
+  {id:3,name:'Curt Cobain',
+  review:'Streamline project, resource, and portfolio mana Portfolio Management.Streamline project, resource, and portfolio management with Microsoft Project and Portfolio Managemen'}
+ ];
+ this.get('/reviews',function(){
+  return {
+    reviews
+  } 
+});
   
   // These comments are here to help you get started. Feel free to delete them.
 
