@@ -23,4 +23,13 @@
     </section>
   </div>
 </div>
-{{outlet}}
+<div class="row">
+  {{#each model as |review|}}
+    <div class="col-md-6 col-sm-12">
+        <section class="review">
+          <h1>{{review.name}}</h1>
+            <p>{{review.review}}</p>
+          </section>
+    </div>
+  {{/each}}
+</div>
