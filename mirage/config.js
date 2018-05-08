@@ -133,7 +133,10 @@ this.get('/employees',function(){
     reviews
   } 
 });
-  
+this.post('/reviews', (schema, request) => {
+  const attrs = JSON.parse(request.requestBody).review;
+  return schema.reviews.create(attrs);
+});
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
