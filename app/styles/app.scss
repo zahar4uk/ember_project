@@ -158,7 +158,8 @@ main{
 	background-color:#ff3f40;
 	color: black;
 }
-.portfolio_nav a:hover{
+.portfolio_nav a:hover,
+.portfolio_nav a.active{
 	color: #f00;
 	border-bottom-color:red;
 }
