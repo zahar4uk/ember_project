@@ -137,6 +137,15 @@ this.post('/reviews', (schema, request) => {
   const attrs = JSON.parse(request.requestBody).review;
   return schema.reviews.create(attrs);
 });
+
+const administrators =  [
+  {id: 0, login: 'admin', password: 'killme'}
+];
+this.get('/administrators',function(){
+  return {
+    administrators
+  } 
+});
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
