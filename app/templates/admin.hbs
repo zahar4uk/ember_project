@@ -4,7 +4,7 @@
             <section class="review">
                 <span>
                      <h4>{{review.name}}</h4>
-                     <button onclick={{action 'delReview' }}>delete this record</button>
+                     <button {{action 'delReview' review.id }}>delete this record</button>
                 </span>
                 <p>{{review.review}}</p>
             </section>

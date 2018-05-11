@@ -1,10 +1,10 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-    model (){
+  model (){
     return this.get('store').findAll('employee');
   },
-    setupController: function(controller, model) {
+  setupController: function(controller, model) {
       
     this._super(controller, model);
     let modelRecord = this.get('store').peekRecord('employee',0);
