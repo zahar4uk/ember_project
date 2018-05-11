@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('portfolio');
   this.route('about-us');
   this.route('authorization');
+  this.route('admin');
 });
 
 export default Router;

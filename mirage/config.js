@@ -137,8 +137,8 @@ this.post('/reviews', (schema, request) => {
   const attrs = JSON.parse(request.requestBody).review;
   return schema.reviews.create(attrs);
 });
-
-const administrators =  [
+// 0686398406
+const administrators = [
   {id: 0, login: 'admin', password: 'killme'}
 ];
 this.get('/administrators',function(){
