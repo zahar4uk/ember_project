@@ -137,9 +137,8 @@ export default function() {
     const attrs = JSON.parse(request.requestBody).review;
     return schema.reviews.create(attrs);
   });
-  this.del('/reviews/:id', (schema, request) => {
-    let review = schema.reviews.find(request.params.id);
-    review.delete();
+  this.del('/reviews/:id', (schema,request) => {
+    reviews.splice(request.params.id,1);
   });
   const administrators = [
     {id: 0, login: 'admin', password: 'killme'}
