@@ -1,1 +1,15 @@
+<div class="row">
+    {{#each model.reviews as |review|}}
+        <div class="col-md-6 col-sm-12">
+            <section class="review">
+                <span>
+                     <h4>{{review.name}}</h4>
+                     <button onclick={{action 'delReview' }}>delete this record</button>
+                </span>
+                <p>{{review.review}}</p>
+            </section>
+        </div>
+    {{/each}}
+</div>
+  
 {{outlet}}

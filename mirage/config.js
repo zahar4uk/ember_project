@@ -137,7 +137,10 @@ this.post('/reviews', (schema, request) => {
   const attrs = JSON.parse(request.requestBody).review;
   return schema.reviews.create(attrs);
 });
-// 0686398406
+this.del('/reviews/:id', (schema, request) => {
+  let review = schema.reviews.find(request.params.id);
+  review.delete();
+});
 const administrators = [
   {id: 0, login: 'admin', password: 'killme'}
 ];
