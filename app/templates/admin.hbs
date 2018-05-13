@@ -6,7 +6,7 @@
                 <section class="review">
                     <span>
                         <h4>{{review.name}}</h4>
-                        <button {{action 'delRecord' review.id 'review' }}>delete this record</button>
+                        <button type="button" class="btn btn-primary" {{action 'delRecord' review.id 'review' }}>delete this record</button>
                     </span>
                     <p>{{review.review}}</p>
                 </section>
@@ -31,9 +31,13 @@
   <div class="row no-gutters">
       {{#each model.portfolios as |portfolio|}}
         <div class="col-lg-3 col-md-6 col-sm-6">  
-          <button {{action 'delRecord' portfolio.id 'portfolio' }}>delete</button>   
           <section class="exemple">         
-            <img src={{portfolio.src}} alt="{{portfolio.title}}"/>
+            <img src={{portfolio.src}} alt="{{portfolio.title}}"/> <br>
+            {{portfolio.title}} <br>
+            <span>
+              <button type="button" class="btn btn-primary"{{action 'delRecord' portfolio.id 'portfolio' }}>delete</button> 
+              <button type="button" class="btn btn-primary">edit</button>  
+            </span>
           </section>
         </div>
       {{/each}}
