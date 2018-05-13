@@ -4,13 +4,13 @@ export default Route.extend({
   model() {
     return RSVP.hash({
       reviews: this.get('store').findAll('review'),
-      employees: this.get('store').findAll('employee')
+      portfolios: this.get('store').findAll('portfolio')
     });
   },
   actions: {
-    delReview(id){
-      this.get('store').findRecord('review', id, { backgroundReload: false }).then(function(review) {
-        review.destroyRecord();
+    delRecord(id, modelName){
+      this.get('store').findRecord(modelName, id, { backgroundReload: false }).then(function(modelName) {
+        modelName.destroyRecord();
       });
     }
   }

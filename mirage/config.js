@@ -74,7 +74,7 @@ export default function() {
       title: 'mock up',
       msrc: '(optional) larger image'
     },{
-      id: 7,
+      id: 8,
       type: 'mock up',
       src: 'Product-image/Example3.png',
       w: 1122,
@@ -137,6 +137,10 @@ export default function() {
     const attrs = JSON.parse(request.requestBody).review;
     return schema.reviews.create(attrs);
   });
+  this.post('/portfolios', (schema, request) => {
+    const attrs = JSON.parse(request.requestBody).portfolios;
+    return schema.portfolios.create(attrs);
+  });
   this.del('/reviews/:id', (schema,request) => {
     reviews.splice(request.params.id,1);
   });
@@ -147,6 +151,9 @@ export default function() {
     return {
       administrators
     } 
+  });
+  this.del('/portfolios/:id', (schema,request) => {
+    portfolios.splice(request.params.id,1);
   });
   // These comments are here to help you get started. Feel free to delete them.
 

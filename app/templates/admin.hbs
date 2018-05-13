@@ -1,15 +1,41 @@
-<div class="row">
-    {{#each model.reviews as |review|}}
-        <div class="col-md-6 col-sm-12">
-            <section class="review">
-                <span>
-                     <h4>{{review.name}}</h4>
-                     <button {{action 'delReview' review.id }}>delete this record</button>
-                </span>
-                <p>{{review.review}}</p>
-            </section>
+  <div class="header_border">
+    <h2>Deleting reviews</h2>
+    <div class="row">
+        {{#each model.reviews as |review|}}
+            <div class="col-md-6 col-sm-12">
+                <section class="review">
+                    <span>
+                        <h4>{{review.name}}</h4>
+                        <button {{action 'delRecord' review.id 'review' }}>delete this record</button>
+                    </span>
+                    <p>{{review.review}}</p>
+                </section>
+            </div>
+        {{/each}}
+    </div>
+  </div>
+<h2>Redaction portfolio</h2>
+<form>
+  <label for="">Image </label>
+{{input type="text" value=imageSrc}}
+<select onchange={{action "changeType" value="target.value"}}>
+    <option value="print tamplate">print tamplate</option>
+    <option value="web tamplate">web tamplate</option>
+    <option value="user interface">user interface</option>
+    <option value="mock up">mock up</option>
+</select>
+<button type="button" class="btn btn-primary" onclick={{action 'addPortfolio'}}>add</button>
+</form>
+
+<article class="portfolio_examples">
+  <div class="row no-gutters">
+      {{#each model.portfolios as |portfolio|}}
+        <div class="col-lg-3 col-md-6 col-sm-6">  
+          <button {{action 'delRecord' portfolio.id 'portfolio' }}>delete</button>   
+          <section class="exemple">         
+            <img src={{portfolio.src}} alt="{{portfolio.title}}"/>
+          </section>
         </div>
-    {{/each}}
-</div>
-  
-{{outlet}}
+      {{/each}}
+  </div>
+</article>
