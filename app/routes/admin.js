@@ -12,6 +12,6 @@ export default Route.extend({
       this.get('store').findRecord(modelName, id, { backgroundReload: false }).then(function(modelName) {
         modelName.destroyRecord();
       });
-    }
+    },
   }
 });

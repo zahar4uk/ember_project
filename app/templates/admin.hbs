@@ -14,35 +14,41 @@
         {{/each}}
     </div>
   </div>
-<h2>Redaction portfolio</h2>
-<form>
-  <label for="">Image </label>
-{{input type="text" value=imageSrc}}
-<select onchange={{action "changeType" value="target.value"}}>
-    <option value="print tamplate">print tamplate</option>
-    <option value="web tamplate">web tamplate</option>
-    <option value="user interface">user interface</option>
-    <option value="mock up">mock up</option>
-</select>
-<button type="button" class="btn btn-primary" onclick={{action 'addPortfolio'}}>add</button>
-</form>
-
-  <div class="avatar">
-    <img src={{editImgSrc}}>
+<div class="row">
+  <div class="col-md-6 col-sm-6">
+    <h3>Add record to portfolio</h3>
+    <form>
+      <label for="">image src: </label>
+    {{input type="text" value=imageSrctoAdd}}
+    <label for="">type: </label>
+    <select onchange={{action "changeType" value="target.value"}}>
+        <option value="print tamplate">print tamplate</option>
+        <option value="web tamplate">web tamplate</option>
+        <option value="user interface">user interface</option>
+        <option value="mock up">mock up</option>
+    </select>
+    <button type="button" class="btn btn-primary" {{action 'addPortfolio'}}>add</button>
+    </form>
   </div>
-  <div>{{selectType}}</div>
-  <form>
-    <label for="">Image </label>
-  {{input type="text" value=editImgSrc}}
-  <select onchange={{action "changeType" value="target.value"}}>
-      <option value="print tamplate">print tamplate</option>
-      <option value="web tamplate">web tamplate</option>
-      <option value="user interface">user interface</option>
-      <option value="mock up">mock up</option>
-  </select>
-  <button type="button" class="btn btn-primary" onclick={{action 'saveChange'}}>save</button>
-  </form>
-
+  <div class="col-md-6 col-sm-6">
+    <h3>Edit record</h3>
+      <div class="avatar">
+        <img src="" alt="">
+      </div>
+      <div>{{selectType}}</div>
+      <form>
+        <label for="">Image </label>
+      {{input type="text" value=editImgSrc}}
+      <select onchange={{action "changeType" value="target.value"}}>
+          <option value="print tamplate">print tamplate</option>
+          <option value="web tamplate">web tamplate</option>
+          <option value="user interface">user interface</option>
+          <option value="mock up">mock up</option>
+      </select>
+      <button type="button" class="btn btn-primary">save</button>
+      </form>
+  </div>
+</div>
 <article class="portfolio_examples">
   <div class="row no-gutters">
       {{#each model.portfolios as |portfolio|}}
@@ -52,7 +58,7 @@
             {{portfolio.title}} <br>
             <span>
               <button type="button" class="btn btn-primary"{{action 'delRecord' portfolio.id 'portfolio' }}>delete</button> 
-              <button type="button" class="btn btn-primary" onclick={{action 'selectProduct' portfolio.src portfolio.type}}>edit</button>  
+              <button type="button" class="btn btn-primary" >edit</button>  
             </span>
           </section>
         </div>

@@ -73,14 +73,6 @@ export default function() {
       h: 658,
       title: 'mock up',
       msrc: '(optional) larger image'
-    },{
-      id: 8,
-      type: 'mock up',
-      src: 'Product-image/Example3.png',
-      w: 1122,
-      h: 658,
-      title: 'mock up',
-      msrc: '(optional) larger image'
     }
   ];
   this.get('/portfolios', function(schema, request) {
