@@ -13,5 +13,13 @@ export default Route.extend({
         modelName.destroyRecord();
       });
     },
+    saveChange(id, type, src){
+      let edit = this.get('store').findRecord('portfolio',id).then(function(portfolio) {
+        portfolio.set('type',type);
+        portfolio.set('src',src);
+      });
+      edit.save();
+    }
   }
 });
+//трудова1

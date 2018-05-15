@@ -21,7 +21,7 @@
       <label for="">image src: </label>
     {{input type="text" value=imageSrctoAdd}}
     <label for="">type: </label>
-    <select onchange={{action "changeType" value="target.value"}}>
+    <select onchange={{action "changeTypeAdd" value="target.value"}}>
         <option value="print tamplate">print tamplate</option>
         <option value="web tamplate">web tamplate</option>
         <option value="user interface">user interface</option>
@@ -32,21 +32,24 @@
   </div>
   <div class="col-md-6 col-sm-6">
     <h3>Edit record</h3>
-      <div class="avatar">
-        <img src="" alt="">
-      </div>
+      
       <div>{{selectType}}</div>
       <form>
         <label for="">Image </label>
-      {{input type="text" value=editImgSrc}}
-      <select onchange={{action "changeType" value="target.value"}}>
+      {{input type="text" value=imageSrctoEdit}}
+       <label for="">type: </label>
+      <select onchange={{action "changeTypeEdit" value="target.value"}}>
           <option value="print tamplate">print tamplate</option>
           <option value="web tamplate">web tamplate</option>
           <option value="user interface">user interface</option>
           <option value="mock up">mock up</option>
       </select>
-      <button type="button" class="btn btn-primary">save</button>
+      <button type="button" class="btn btn-primary" {{action 'saveChange' imageIdtoEdit selectTypetoEdit imageSrctoEdit}}>save</button>
       </form>
+      <div class="avatar">
+        <img src={{imageSrctoEdit}} alt="">
+        <span>{{selectTypetoEdit}}</span>
+      </div>
   </div>
 </div>
 <article class="portfolio_examples">
@@ -58,7 +61,7 @@
             {{portfolio.title}} <br>
             <span>
               <button type="button" class="btn btn-primary"{{action 'delRecord' portfolio.id 'portfolio' }}>delete</button> 
-              <button type="button" class="btn btn-primary" >edit</button>  
+              <button type="button" class="btn btn-primary" onclick={{action 'selectProduct' portfolio.src portfolio.type portfolio.id}} >edit</button>  
             </span>
           </section>
         </div>

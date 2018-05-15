@@ -1,0 +1,21 @@
+{{!-- {{fio}}
+{{avatarSrc}}
+{{age}}
+{{address}} --}}
+<div class="row">
+  <div class="col-sm-6 col-md-6">
+    <div class="avatar">
+      <img src={{avatarSrc}} alt="avatar" >
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-6">
+    <h2>{{fio}}</h2>
+    <p>
+      Age: {{age}}
+    </p>
+    <p>
+      Addres: {{address}}
+    </p>
+    {{#link-to 'userlogin'}}Exit {{/link-to}}
+  </div>
+</div>

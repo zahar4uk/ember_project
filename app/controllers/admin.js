@@ -2,9 +2,16 @@ import Controller from '@ember/controller';
 export default Controller.extend({
   selectTypetoAdd: 'print tamplate',
   imageSrctoAdd: null,
+
+  selectTypetoEdit: null,
+  imageSrctoEdit: null,
+  imageIdtoEdit: null,
   actions:{
-    changeType(value){
+    changeTypeAdd(value){
       this.set('selectTypetoAdd', value);
+    },
+    changeTypeEdit(value){
+      this.set('selectTypetoEdit', value);
     },
     addPortfolio(){
       let lg = this.get('model.portfolios.length');
@@ -18,18 +25,18 @@ export default Controller.extend({
         msrc: '(optional) larger image'
       });
       store.save();
+    },
+    selectProduct(src, type, id){
+      this.set('imageSrctoEdit',src);
+      this.set('selectTypetoEdit',type);
+      this.set('imageIdtoEdit',id);
     }
-    
-    // selectProduct(src, type){
-    //   this.set('selectType',type);
-    //   this.set('editImgSrc',src);
-    //   this.set('selectedProductId',src);
-    // },
     // saveChange(){
-    //   this.get('store').findRecord('portfolio', this.get('selectedProductId')).then(function(portfolio) {
-    //     portfolio.set('type',this.get('editImgSrc'));
-    //     portfolio.set('src',this.get('selectType'));
+    //   let edit = this.get('store').findRecord('model.portfolios', this.get('imageIdtoEdit')).then(function(portfolio) {
+    //     portfolio.set('type',this.get('selectTypetoEdit'));
+    //     portfolio.set('src',this.get('imageSrctoEdit'));
     //   });
+    //   edit.save();
     // }
   }
 });

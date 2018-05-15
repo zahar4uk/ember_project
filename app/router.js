@@ -14,6 +14,8 @@ Router.map(function() {
   this.route('about-us');
   this.route('authorization');
   this.route('admin');
+  this.route('userlogin');
+  this.route('user');
 });
 
 export default Router;

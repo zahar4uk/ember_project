@@ -109,7 +109,18 @@ export default function() {
       employees
     } 
   });
-
+  const users = [
+    {id: 0, fio: 'Захарчук Владислав Борисович', age: 20, avatarSrc: 'Users/mask.jpg', address: 'Intitutskaaaa 11/3',login: 'vlados',password: 'grindcore' },
+    {id: 1, fio: 'Григорчук Олександр Борисович', age: 20, avatarSrc: 'Users/mask.jpg', address: 'Intitutskaaaa 11/3',login: 'sanjok',password: 'karapuz' },
+    {id: 2, fio: 'Ткачук Євгеній Андріййович', age: 20, avatarSrc: 'Users/mask.jpg', address: 'Intitutskaaaa 11/3',login: 'kamandir',password: 'lysyj' },
+    {id: 3, fio: 'Шевчук Олег Анатолійович', age: 20, avatarSrc: 'Users/mask.jpg', address: 'Intitutskaaaa 11/3',login: 'aljaska',password: 'grdcoiuyre' }
+  ];
+  this.get('/users',function(){
+    return {
+      users
+    } 
+  });
+  
   const reviews = [
     {id:0, name:'Elon Mask',
       review:'Streamline project, resource, and portfolio mana Portfolio Management.Streamline project, resource, and portfolio management with Microsoft Project and Portfolio Managemen'},
@@ -148,7 +159,9 @@ export default function() {
     portfolios.splice(request.params.id,1);
   });
   // These comments are here to help you get started. Feel free to delete them.
-
+  this.get('/portfolios/:id', (schema, request) => {
+    portfolios.request.params.id.type = request.params.type;
+  })
   /*
     Config (with defaults).
 
