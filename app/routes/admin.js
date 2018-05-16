@@ -14,12 +14,13 @@ export default Route.extend({
       });
     },
     saveChange(id, type, src){
-      let edit = this.get('store').findRecord('portfolio',id).then(function(portfolio) {
-        portfolio.set('type',type);
-        portfolio.set('src',src);
-      });
-      edit.save();
+      this.get('store').findRecord('portfolio',id).then(function(record) {
+        record.set('type',type);
+        record.set('src',src);
+        record.save();
+        
+      })
+      
     }
   }
 });
-//трудова1

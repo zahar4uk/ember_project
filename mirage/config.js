@@ -158,10 +158,10 @@ export default function() {
   this.del('/portfolios/:id', (schema,request) => {
     portfolios.splice(request.params.id,1);
   });
+  
+
   // These comments are here to help you get started. Feel free to delete them.
-  this.get('/portfolios/:id', (schema, request) => {
-    portfolios.request.params.id.type = request.params.type;
-  })
+  // 
   /*
     Config (with defaults).
 
