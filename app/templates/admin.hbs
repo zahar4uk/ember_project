@@ -44,7 +44,7 @@
           <option value="user interface">user interface</option>
           <option value="mock up">mock up</option>
       </select>
-      <button type="button" class="btn btn-primary" {{action 'saveChange' imageIdtoEdit selectTypetoEdit imageSrctoEdit}}>save</button>
+      <button type="button" class="btn btn-primary" {{action 'saveChange' selectRecord selectTypetoEdit imageSrctoEdit}}>save</button>
       </form>
       <div class="avatar">
         <img src={{imageSrctoEdit}} alt="">
@@ -58,7 +58,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6">  
           <section class="exemple">         
             <img src={{portfolio.src}} alt="{{portfolio.title}}"/> <br>
-            {{portfolio.title}} <br>
+            {{portfolio.type}} <br>
             <span>
               <button type="button" class="btn btn-primary"{{action 'delRecord' portfolio.id 'portfolio' }}>delete</button> 
               <button type="button" class="btn btn-primary" onclick={{action 'selectProduct' portfolio.src portfolio.type portfolio.id}} >edit</button>  

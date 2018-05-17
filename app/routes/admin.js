@@ -13,14 +13,10 @@ export default Route.extend({
         modelName.destroyRecord();
       });
     },
-    saveChange(id, type, src){
-      this.get('store').findRecord('portfolio',id).then(function(record) {
-        record.set('type',type);
-        record.set('src',src);
-        record.save();
-        
-      })
-      
+    saveChange(record, type, src){
+      record.set('type',type);
+      record.set('src',src);
+      record.save();
     }
   }
 });

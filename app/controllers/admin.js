@@ -5,7 +5,7 @@ export default Controller.extend({
 
   selectTypetoEdit: null,
   imageSrctoEdit: null,
-  imageIdtoEdit: null,
+  selectRecord: null,
   actions:{
     changeTypeAdd(value){
       this.set('selectTypetoAdd', value);
@@ -29,14 +29,7 @@ export default Controller.extend({
     selectProduct(src, type, id){
       this.set('imageSrctoEdit',src);
       this.set('selectTypetoEdit',type);
-      this.set('imageIdtoEdit',id);
+      this.set('selectRecord',this.get('store').peekRecord('portfolio',id));
     }
-    // saveChange(){
-    //   let edit = this.get('store').findRecord('model.portfolios', this.get('imageIdtoEdit')).then(function(portfolio) {
-    //     portfolio.set('type',this.get('selectTypetoEdit'));
-    //     portfolio.set('src',this.get('imageSrctoEdit'));
-    //   });
-    //   edit.save();
-    // }
   }
 });
