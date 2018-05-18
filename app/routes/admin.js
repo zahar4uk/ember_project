@@ -9,6 +9,7 @@ export default Route.extend({
   },
   actions: {
     delRecord(id, modelName){
+      this.controller.set('countDel',this.controller.get('countDel')+1);
       this.get('store').findRecord(modelName, id, { backgroundReload: false }).then(function(modelName) {
         modelName.destroyRecord();
       });

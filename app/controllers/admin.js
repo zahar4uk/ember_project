@@ -7,6 +7,7 @@ export default Controller.extend({
   imageSrctoEdit: null,
   selectRecord: null,
   selectElem: false,
+  countDel: 0,
   actions:{
     changeTypeAdd(value){
       this.set('selectTypetoAdd', value);
@@ -17,7 +18,7 @@ export default Controller.extend({
     addPortfolio(){
       let lg = this.get('model.portfolios.length');
       let store = this.get('store').createRecord('portfolio', {
-        id:  lg,
+        id: this.countDel+lg,
         type: this.get('selectTypetoAdd'),
         src:  this.get('imageSrctoAdd'),
         w: 1122,
