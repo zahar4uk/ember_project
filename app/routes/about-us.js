@@ -11,7 +11,7 @@ export default Route.extend({
 
     controller.set('workerName',modelRecord.get('name'));
     controller.set('workerTitle',modelRecord.get('title'));
-    controller.set('workerDescription',modelRecord.get('string'));
+    controller.set('workerDescription',modelRecord.get('description'));
     controller.set('imageSrc',modelRecord.get('src'));
   }
 });

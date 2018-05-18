@@ -14,9 +14,15 @@ export default Route.extend({
       });
     },
     saveChange(record, type, src){
-      record.set('type',type);
-      record.set('src',src);
-      record.save();
+      if(this.controller.get('selectElem')==true){
+        record.set('type',type);
+        record.set('src',src);
+        record.save();
+      }
+      else {
+        alert('Item not selected');
+      }
+      
     }
   }
 });

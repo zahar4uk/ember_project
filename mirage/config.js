@@ -158,17 +158,11 @@ export default function() {
   this.del('/portfolios/:id', (schema,request) => {
     portfolios.splice(request.params.id,1);
   });
-  // this.put('/portfolios/:id', (schema, request) => {
-  //   var id = request.params.id;
-  //   const attrs = JSON.parse(request.requestBody).portfolios;
-  //   return schema.portfolios.update(id, attrs);
-    
-  // });
+ 
   this.put('/portfolios/:id', function(schema, request) {
-    var id = request.params.id;
     // var attrs = JSON.parse(request.requestBody).portfolios;
     return portfolios.forEach(function(obj) {
-      if (obj.id === id) {
+      if (obj.id === request.params.id) {
         obj.id['type'] = request.queryParams.type;
         obj.id['src'] = request.queryParams.src;
       }

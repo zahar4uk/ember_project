@@ -6,6 +6,7 @@ export default Controller.extend({
   selectTypetoEdit: null,
   imageSrctoEdit: null,
   selectRecord: null,
+  selectElem: false,
   actions:{
     changeTypeAdd(value){
       this.set('selectTypetoAdd', value);
@@ -30,6 +31,7 @@ export default Controller.extend({
       this.set('imageSrctoEdit',src);
       this.set('selectTypetoEdit',type);
       this.set('selectRecord',this.get('store').peekRecord('portfolio',id));
+      this.set('selectElem', true)
     }
   }
 });

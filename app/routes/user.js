@@ -4,11 +4,6 @@ export default Route.extend({
   model (){
     return this.get('store').findAll('user')
   },
-  actions:{
-    showParams(){
-      alert(this.get('store').peekRecord('user', this.controller.get('id')).get('fio'));
-    }
-  },
   setupController: function(controller, model) {
     this._super(controller, model);
     let userInfo = this.get('store').peekRecord('user', this.controller.get('id'));
